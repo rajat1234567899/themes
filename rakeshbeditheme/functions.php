@@ -119,3 +119,8 @@ $customizer_path = get_template_directory() . '/inc/customizer.php';
 if (file_exists($customizer_path)) {
     require_once $customizer_path;
 }
+
+function custom_theme_screenshot() {
+    return get_stylesheet_directory_uri() . '/sacreenshots.png';
+}
+add_filter('theme_screenshot_url', 'custom_theme_screenshot');
