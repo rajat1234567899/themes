@@ -115,4 +115,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 // Customizer additions
-require get_template_directory() . '/inc/customizer.php';
+$customizer_path = get_template_directory() . '/inc/customizer.php';
+if (file_exists($customizer_path)) {
+    require_once $customizer_path;
+}
